@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #DEB887;
+    }
+  </style>
+    <title>Document</title>
+</head>
+
+<body>
+ <p id="teste"></p>
+ <button onclick="mostrarOculto()">Clique aqui</button>
+
+<p id="textoOculto" style="display: none;">
+  Parabens voce encontrou!
+</p>
+<script>
+  function mostrarOculto() {
+    var texto = document.getElementById("textoOculto");
+    texto.style.display = "block"; 
+  }
+</script>
+ <script>
+  document.getElementById("teste").innerHTML = "Testando JavaScript"
+ </script>
+</body>
+</html>
