@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #9400d3;
+      color: white;
+    }
+
+    #DIV {
+      width: 300px;
+      height: 150px;
+      background-color: #800080;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Aprendendo a clicar e somar</h1>
+  <p>Clique aqui para somar</p>
+
+  <button onclick="minhafuncao()">Clique aqui</button>
+
+  <div id="DIV">Placar = 0</div>
+
+  <script>
+    let placar = 0;
+
+    function minhafuncao() {
+      placar += 1;
+      document.getElementById("DIV").innerText = "Placar = " + placar;
+    }
+  </script>
+
+</body>
+</html>

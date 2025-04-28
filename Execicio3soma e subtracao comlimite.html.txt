@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #9400d3;
+      color: white;
+    }
+
+    #DIVsoma, #DIVsubtracao, #DIVcaixadeAlerta {
+      width: 200px;
+      height: 80px;
+      background-color: #800080;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 20px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Aprendendo a somar e subtrair</h1>
+  <p>Clique aqui para somar ou subtrair:</p>
+  <button onclick="somar()">Clique aqui para somar</button>
+  <button onclick="subtrair()">Clique aqui para subtrair</button>  
+  
+  <div id="DIVsoma">Soma = 0</div>
+  <div id="DIVsubtracao">Subtração = 0</div>
+  <div id="DIVcaixadeAlerta">Limite: 10 / -10</div>
+
+  <script>
+    let somaPlacar = 0;
+    let subPlacar = 0;
+
+    function somar() {
+      if (somaPlacar < 10) {
+        somaPlacar += 1;
+        document.getElementById("DIVsoma").innerText = "Soma = " + somaPlacar;
+      } else {
+        alert("Você atingiu o limite máximo de soma (10)!");
+      }
+    }
+
+    function subtrair() {
+      if (subPlacar > -10) {
+        subPlacar -= 1;
+        document.getElementById("DIVsubtracao").innerText = "Subtração = " + subPlacar;
+      } else {
+        alert("Você atingiu o limite mínimo de subtração (-10)!");
+      }
+    }
+  </script>
+
+</body>
+</html>

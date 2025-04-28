@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #9400d3;
+      color: white;
+    }
+
+    #DIVsoma, #DIVsubtracao {
+      width: 300px;
+      height: 150px;
+      background-color: #800080;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Aprendendo a somar e subtrair </h1>
+  <p>Clique aqui para somar ou subtrair:</p>
+  <button onclick="somar()">Clique aqui para somar   :</button>
+  <button onclick="subtrair()">Clique aqui para subtrair:</button>
+  <button onclick="reset()">Clique aqui para resetar tudo:</button>
+  <div id="DIVsoma">Placar = 0</div>
+  <div id="DIVsubtracao">Placar = 0</div>
+
+  <script>
+    let placar = 0;
+
+    function somar() {
+      placar += 1;
+      document.getElementById("DIVsoma").innerText = "Placar = " + placar;
+    }
+
+    function subtrair() {
+      placar -= 1;
+      document.getElementById("DIVsubtracao").innerText = "Placar = " + placar;
+    }
+    
+    function reset() {
+      placar = 0;
+      document.getElementById("DIVsoma").innerText = "Placar = " + placar;
+      document.getElementById("DIVsubtracao").innerText = "Placar = " + placar;
+    }
+  </script>
+
+</body>
+</html>
